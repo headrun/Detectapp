@@ -1,0 +1,23 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/imgs/logo.svg">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-header>
+</ion-header>
+<ion-content class="no-border" style="background-image:url('assets/imgs/loginb.png');background-size: cover; height: 100%; width: 100%;" ion-fixed no-bounce>
+  <div id="recaptcha-container"></div>
+  <img src = "assets/imgs/loginheader.png" alt = "logo" class="login-header">
+  <div class="login-sec">
+    <!-- <input type="number" [(ngModel)]="phoneNumber" placeholder="Enter your Phone number" class="phone-field"> -->
+    <button type="button" (click) = "loginUser()" class = "loginbtn" ion-button>Login</button>
+  </div>
+  <hr class="border-line">
+  <div style="display: flex; justify-content: center; position:relative; top:30%;">
+    <img src = "assets/imgs/Facebook.png" alt = "logo" style="width:25%; height: 25%; position: relative; right: -15px;">
+    <img src = "assets/imgs/Twitter.png" alt = "logo" style="width:25%; height: 25%; position: relative; left:-15px;">
+  </div>
+</ion-content>

@@ -1,0 +1,90 @@
+<!--
+  Generated template for the DetailViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Group Posts</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <ion-row class="group_details-1" padding style="padding-bottom:0;">
+    <ion-col class="img-sec">
+      <img src="{{pageData.images_links}}" alt="" id="grp-img">
+    </ion-col>
+    <ion-col class="fol-sec">
+      {{pageData.followers}} Followers
+    </ion-col>
+    <ion-col class="post-sec">
+      {{pageRenderData.length}} Posts
+    </ion-col>
+  </ion-row>
+  <ion-row class="group_details-2" padding style="padding:0px 16px;">
+    <ion-col class="title-sec">
+      {{pageData.title}}
+    </ion-col>
+  </ion-row>
+  <ion-row class="about-sec" padding style="padding:0px 16px;">
+    <ion-col>About</ion-col>
+  </ion-row>
+  <ion-row class="desc-sec" padding style="padding-top:0px">
+    <ion-col>
+      {{pageData.description}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col offset-8 col-4 class="padding">
+      <img src="assets/imgs/new_post.png" alt="" id="new-post" (click)="newPost()">
+      <!-- <button type="button" ion-button round color="secondary">New Post</button> -->
+    </ion-col>
+  </ion-row>
+  <div *ngIf="pageRenderData.length == 0" class="mpty-data-msg">No Posts</div>
+  <ion-row *ngFor="let post of pageRenderData; index as i">
+    <ion-col>
+      <ion-card *ngIf="post.post != '' || post.post_image != ''">
+        <div (click)="postView(i)">
+          <ion-card-header>
+            <ion-row>
+              <ion-col col-2 class="pro-sec">
+                <img src="{{post.pro_img}}" alt="" id="pro-img">
+              </ion-col>
+              <ion-row *ngIf="post.name != ''">
+                <ion-col class="user-sec">
+                  <ion-row class="u-name">{{post.name}}</ion-row>
+                  <ion-row class="role">{{post.role}} &bull; {{post.spec}}</ion-row>
+                  <ion-row class="post-date">{{post.created_at}}</ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col *ngIf="post.post_image != ''">
+                <img src="{{post.post_image}}" alt="" id="post-img">
+              </ion-col>
+            </ion-row>
+            <ion-row class="postdesc-sec">
+              <ion-col class="postdesc-sec">{{post.post}}</ion-col>
+            </ion-row>
+          </ion-card-content>
+        </div>
+        <ion-row class="actionbar">
+          <div>
+            <ion-col><button (click)="actionBtn('like', i)" [ngClass]="{'color':post.postlike}" class="non-btn">Like</button></ion-col>
+            <ion-col><button (click)="actionBtn('comment', i)" class="non-btn">Comment</button></ion-col>
+          </div>
+          <div (click)="postDetail(i)"></div>
+          <div (click)="postDetail(i)">
+            <ion-col class="likes_count"><img src="assets/imgs/Like.png" alt="" id="like" style="top:23px; position: relative;"><span style="left: -50px; top: 8px; position: relative;">{{post.likes_count}}</span></ion-col>
+            <ion-col class="cmt_count"><img src="assets/imgs/comment.png" alt="" id="chat" style="top:-26px; position: relative;"><span  style="position: relative; top: -42px;">{{post.comments_count}}</span></ion-col>
+          </div>
+        </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<footer [ic_active]="3"></footer>

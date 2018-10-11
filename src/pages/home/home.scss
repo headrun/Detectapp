@@ -1,0 +1,142 @@
+page-home {
+
+#container {
+    width: 300px; 
+    margin-left:auto; 
+    margin-right: auto; 
+}
+
+  #custom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width:100%;
+  background-color: #212121;
+}
+
+.flb {
+  background-color: #212121;
+  height:100%;
+  width:100%;
+  animation: pulse 1s linear forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Aligner-item {
+  max-width: 50%;
+}
+.Aligner-item--top {
+  align-self: flex-start;
+}
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+#custom-overlay img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  animation: animation 3100ms linear infinite both;
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.no-scroll .scroll-content{
+    overflow: hidden;
+  }
+
+  .login-header{
+    position: relative;
+    top:-2px;
+  }
+  .login-sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top:20%;
+  }
+  .phone-field{
+    background-color: black;
+    height:40px;
+    border: 1px solid black;
+    border-radius:10px;
+    width:80%;
+    color:white;
+    font-size:16px;
+    padding-left:5px;
+  }
+
+  .loginbtn{
+    background-color: #8CD396;
+    width:50%;
+    color: white;
+    font-weight: bold;
+    margin-top:50px;
+  }
+
+  ::placeholder{
+    color:white;
+  }
+  .border-line{
+    background-color: white;
+    height:1px;
+    border-radius: 50px;
+    position: relative;
+    top:25%;
+    justify-content: center;
+    width:50%;
+  }
+
+}
+
+#custom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width:100%;
+  background-color: #002a3e;
+}
+
+.flb {
+  background-color: #3ebffb;
+  height:100%;
+  width:100%;
+  animation: pulse 1s linear forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Aligner-item {
+  max-width: 50%;
+}
+.Aligner-item--top {
+  align-self: flex-start;
+}
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+#custom-overlay img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  animation: animation 3100ms linear infinite both;
+  animation-delay: 1s;
+}

@@ -1,0 +1,19 @@
+<ion-header>
+  <div>
+    <div class="head-container">
+      <img src="assets/imgs/green_header.png" id="green_header">
+      <img src="assets/imgs/detect_black.png" id="detect_black">
+      <span class="head-text">CHATS</span>
+    </div>
+  </div>
+ </ion-header>
+
+<ion-content padding>
+
+    <ion-fab bottom right (click)="newChat()">
+      <button ion-fab mini color="secondary"><ion-icon name="add" ></ion-icon></button>
+    </ion-fab>
+
+</ion-content>
+
+<footer [ic_active]="4"></footer>

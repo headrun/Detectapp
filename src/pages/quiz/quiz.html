@@ -1,0 +1,62 @@
+<!--
+  Generated template for the QuizPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>quiz</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!isQuizEmpty" class="mpty-data-msg">No Quiz</div>
+
+  <div *ngIf="isQuizEmpty && !quizCmplt">
+    <a href="https://detect.today/#/terms_conditions" *ngIf="!terms_conditions" class="tc">Terms & condition</a>
+    <button ion-button *ngIf="!terms_conditions" (click)="acceptConditions()" class="tc-btn">I agree</button>
+  </div>
+
+  <ion-slides  #slides *ngIf="terms_conditions && quizData && quizData.length && !quizCmplt">
+    <ion-slide *ngFor="let question of quizData; index as i">
+      <span class="q-num-chip">{{i+1}} of {{quizData.length}}</span>
+      <h4 class="q-title" *ngIf="question.question"> {{question.question}}</h4>
+      <ion-list radio-group [(ngModel)]="questions[i]" name="questions[i]" *ngIf="question.question">
+        <ion-item>
+          <ion-label>{{question.option1}}</ion-label>
+          <ion-radio value="{{question.option1}}" (click)="answered('option1', i)"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{question.option2}}</ion-label>
+          <ion-radio value="{{question.option2}}" (click)="answered('option2', i)"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{question.option3}}</ion-label>
+          <ion-radio value="{{question.option3}}" (click)="answered('option3', i)"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{question.option4}}</ion-label>
+          <ion-radio value="{{question.option4}}" (click)="answered('option4', i)"></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+  <div *ngIf="terms_conditions && quizData.length != 0 && !quizCmplt">
+    <button ion-button full style="background-color:#8CD396; position:fixed; bottom: 50px; height: 50px; left:0px; z-index:10;" (click)="questionsbt()">SUBMIT</button>
+    <!-- <button type="button" ion-button color="secondary" (click)="questionsbt()"  class="sbt-btn">submit</button> -->
+  </div>
+  <ion-card *ngIf="quizCmplt">
+    <ion-card-header class="score-board">
+      <h2 class="score-text">Your Score is</h2>
+      <div class="score-sec">
+        <img src="../../assets/imgs/date_bg.png" alt="" class="score-bg">
+        <p class="score">{{correctCount}}</p>
+      </div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+<footer [ic_active]="2"></footer>

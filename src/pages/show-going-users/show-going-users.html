@@ -1,0 +1,41 @@
+<!--
+  Generated template for the ShowGoingUsersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>{{header}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content  style="height:100%">
+  <div *ngIf="header === 'Comments'">
+    <ion-list>
+      <ion-item *ngFor="let user of data; index as i">
+        <img src="{{user.pro_img}}" alt="img" id="dmns">
+        <div class="cmt-cnt">
+          <span>{{user.name}}</span>
+          <span *ngIf="user.comment_text" class="cmt-txt">{{user.comment_text}}</span>
+        </div>
+        <span class="like-count"><img src="../../assets/imgs/_7.png" id="limg" alt="like"> {{user.likes_count}}</span>
+        <div class="margin-left">
+          <span ><button type="button" (click)="actionBtn('like',i)" class="non-btn" [ngClass]="{'color':user.cmtlike}">Like</button></span>
+          <span><button type="button" class="non-btn" (click)="actionBtn('abuse', i)">Abuse</button></span>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngIf="header === 'Users'">
+    <ion-list>
+      <ion-item *ngFor="let user of data">
+        <img src="{{user.pro_img}}" alt="" id="dmns">
+        <h5 class="align-text">{{user.name}}</h5>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

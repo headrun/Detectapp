@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1004085689245",
+    "firebase_url": "https://doctorsmanagement-8b9fe.firebaseio.com",
+    "project_id": "doctorsmanagement-8b9fe",
+    "storage_bucket": "doctorsmanagement-8b9fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004085689245:android:cdd43cc8eb819031",
+        "android_client_info": {
+          "package_name": "com.germ.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004085689245-dv60bv35v3ff52atntmsr2uccc0i17cp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD28j9Yr1a9q51a7E3nViWG_8Nv-CaWeg0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,68 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.moust.cordova.videoplayer": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-recaptcha": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-support-google-services": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-accountkit": {
+      "APP_ID": "470054840144740",
+      "APP_NAME": "detect",
+      "CLIENT_TOKEN": "68312b97000c434c94da85ea6c229281",
+      "API_VERSION": "v1.0",
+      "PACKAGE_NAME": "com.germ.app"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "com.germ.app"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.germ.app"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Post Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row class="post-header">
+    <ion-col col-3>{{postData.created_at | date}}</ion-col>
+    <ion-col offset-7 col-2><img src="{{postData.pro_img}}" alt=""  id="pro-img"></ion-col>
+  </ion-row>
+
+  <ion-row class="user-profile">
+    <ion-col col-2>
+      <img src="{{postData.pro_img}}" alt="" id="pro-img">
+    </ion-col>
+    <ion-col class="user-details" col-10>
+      <ion-row class="u-name">{{postData.name}}</ion-row>
+      <ion-row class="role">{{postData.role}} &bull; {{postData.spec}}</ion-row>
+      <ion-row class="post-date">{{postData.created_at | date}}</ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="postData.post_image != ''">
+    <ion-col>
+      <img src="{{postData.post_image}}" alt="" id="post-img" height="300px">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="post-desc">
+      {{postData.post}}
+    </ion-col>
+  </ion-row>
+  <ion-row class="actionbar">
+    <div>
+      <ion-col><button (click)="actionBtn('like')" [ngClass]="{'color':postData.postlike}" class="non-btn">Like</button></ion-col>
+      <ion-col><button (click)="actionBtn('abuse')" class="non-btn">Report</button></ion-col>
+    </div>
+    <div>
+      <ion-col class="likes_count"><img src="assets/imgs/Like.png" alt="" id="like" style="top:-1px; left:-28px; position: relative;"><span style="left: -20px; top: -3px; position: relative;">{{postData.likes_count}}</span></ion-col>
+      <ion-col class="cmt_count"><img src="assets/imgs/comment.png" alt="" id="chat" style="top:1px; left:-20px; position: relative;"><span  style="position: relative; top: -2px; left:-13px">{{postData.comments_count}}</span></ion-col>
+    </div>
+  </ion-row>
+  <ion-row class="cmt-sec">
+    <ion-col col-2><img src="{{postData.pro_img}}" alt="" id="pro-img"></ion-col>
+    <ion-col col-10><input type="text" placeholder="write a comment" [(ngModel)]="postData.cmt_text" style="width:100%" id="text_cmt"></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col offset-9 col-3><img src="assets/imgs/Post.png" alt="" (click)="addCmt()" id="post-btn"></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      {{postData.comments_count}} Comments
+    </ion-col>
+  </ion-row>
+  <div>
+    <ion-row *ngFor="let cmt of commentsData; index as i">
+      <ion-col offset-1 col-2 class="cmt-img">
+        <img src="{{cmt.pro_img}}" alt="" id="pro-img">
+      </ion-col>
+      <ion-col col-9 class="cmt-txt">
+        <ion-row style="font-family: Assistant-Bold">{{cmt.name}}</ion-row>
+        <ion-row>{{cmt.comment_text}}</ion-row>
+        <ion-row class="cmt-action">
+          <ion-col col-2><button (click)="actionBtn('cmtlike', i)" [ngClass]="{'btncolor':cmt.cmtlike}" class="btn">Like</button></ion-col>
+          <ion-col col-2><button (click)="actionBtn('cmtabuse', i)" class="btn">Report</button></ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf="commentsData.length == 0" class="mpty-data-msg">No Comments</div>
+</ion-content>
+<footer [ic_active]="3"></footer>
+</ion-content>

@@ -1,0 +1,71 @@
+$font-path: "../assets/fonts";
+
+@font-face {
+  font-family: 'Assistant-Regular';
+  src:url('../assets/fonts/Assistant-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Assistant-Bold';
+  src:url('../assets/fonts/Assistant-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Assistant-ExtraBold';
+  src:url('../assets/fonts/Assistant-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ $font-family-base: "Assistant-Regular";
+ $font-family-ios-base: $font-family-base;
+ $font-family-md-base: $font-family-base;
+ $font-family-wp-base: $font-family-base;
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #8CD396,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+$tabs-md-background:color($colors, light);
+$tabs-md-tab-color-active:color($colors, secondary);
+
+$loading-ios-text-color: #000000;
+$loading-ios-background: transparent;
+$loading-ios-spinner-color: #145A32;
+$loading-ios-spinner-ios-color:#145A32;
+$loading-md-spinner-color:#145A32;
+$loading-md-background: transparent;
+
+@import "ionic.theme.default";
+
+@import "ionic.ionicons";
+
+@import "roboto";
+@import "noto-sans";
+
+
+$loading-ios-text-color: #000000;
+$loading-ios-background: transparent;
+$loading-ios-spinner-color: #8CD396;
+$loading-ios-spinner-ios-color: #8CD396;
+$loading-md-spinner-color: #8CD396;
+$loading-md-background: transparent;
+$loading-wp-background: transparent;

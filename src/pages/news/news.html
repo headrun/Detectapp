@@ -1,0 +1,51 @@
+<ion-header>
+  <div>
+    <div class="head-container">
+      <img src="assets/imgs/green_header.png" id="green_header">
+      <img src="assets/imgs/detect_black.png" id="detect_black">
+      <span class="head-text">NEWS</span>
+    </div>
+  </div>
+ </ion-header>
+<ion-content style="background-color:#ffffff;" >
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <div class="mpty-data-msg" *ngIf="this.isEmpty == true && newsData.length == 0">No NEWS</div>
+  <div class="content-style">
+    <ion-card *ngFor="let news of newsData; index as i" class="card-mod">
+      <ion-card-content>
+        <ion-row class="card-padding">
+        <ion-col col-4>
+          <img src="{{news.images_links[0]}}" id="img-dmns">
+        </ion-col>
+        <ion-col col-8>
+          <ion-row>
+            <h4 class="headline" style="font-size:16px;"><a href="{{news.hyper_link}}">{{news.title | uppercase}}</a></h4>
+          </ion-row>
+          <ion-row>
+            <span class="tagline">{{news.source}} &bull; {{news.date | date}}</span>
+            <p class="news-sec">{{news.description}}</p>
+          </ion-row>
+        </ion-col>
+        </ion-row>
+        <ion-row class="news-actions">
+        <ion-col col-4 class="middle"  *ngIf="news.likeBtn">
+          <img src="assets/imgs/like_active.png" alt=""(click)="actionBtn('like', i)" class="news_like">
+          <button type="button" (click)="showLikedUsers(i)" class="btn news_likes_cnt">{{news.likes_count}}</button>
+        </ion-col>
+        <ion-col col-4 class="middle"  *ngIf="!news.likeBtn">
+          <img src="assets/imgs/like_inactive.png" alt="" (click)="actionBtn('like', i)" class="news_like">
+          <button type="button" (click)="showLikedUsers(i)" class="btn news_likes_cnt">{{news.likes_count}}</button>
+        </ion-col>
+      </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<footer [ic_active]= "1"></footer>

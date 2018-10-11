@@ -1,0 +1,79 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title >Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="height:100%">
+
+  <ion-list>
+
+  <ion-item>
+    <ion-label floating>First Name<span style="color:#F8200A">*</span> </ion-label>
+    <ion-input [(ngModel)]="firstName" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Last Name <span style="color:#F8200A">*</span></ion-label>
+    <ion-input [(ngModel)]="lastName" type="text"></ion-input>
+  </ion-item>
+
+  <!-- <ion-item>
+    <ion-label floating>Phone No <span style="color:#F8200A">*</span></ion-label>
+    <ion-input [(ngModel)]="phoneNo" type="number"></ion-input>
+  </ion-item> -->
+
+  <ion-item>
+    <ion-label floating>Email Address <span style="color:#F8200A">*</span></ion-label>
+    <ion-input [(ngModel)]="emailAddress" type="email"></ion-input>
+  </ion-item>
+
+  <ion-item style="margin-top:10px;">
+    <ion-label>Designation <span style="color:#F8200A">*</span></ion-label>
+    <ion-select [(ngModel)]="designation" (ionChange)="DesignationFn()">
+      <ion-option value="Doctor">Doctor</ion-option>
+      <ion-option value="Student">Student</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item style="margin-top:10px;" *ngIf="showSpecialisation">
+    <ion-label>Specialisation</ion-label>
+    <ion-select [(ngModel)]="specialisation" (ionChange)="specialisationFn()">
+      <ion-option value="General Pathology">General Pathology</ion-option>
+      <ion-option value="Oncopathology">Oncopathology</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item style="margin-top:10px;" *ngIf="showGeneral">
+    <ion-label>General Pathology</ion-label>
+    <ion-select [(ngModel)]="general" (ionChange)="generalFn()">
+      <ion-option value="Haematopathology">Haematopathology</ion-option>
+      <ion-option value="Histopathology">Histopathology</ion-option>
+      <ion-option value="Clinical pathology">Clinical pathology</ion-option>
+      <ion-option value="Molecular Pathology">Molecular Pathology</ion-option>
+    </ion-select>
+  </ion-item>
+
+    <ion-item style="margin-top:10px;" *ngIf="showOnco">
+      <ion-label>Oncopathology</ion-label>
+      <ion-select [(ngModel)]="onco" (ionChange)="oncoFn()">
+        <ion-option value="Hemato Oncopathology">Hemato Oncopathology</ion-option>
+        <ion-option value="Histo Oncopathology">Histo Oncopathology</ion-option>
+      </ion-select>
+    </ion-item>
+
+  <ion-item *ngIf="showSpecialisation">
+    <ion-label floating>Experience(yrs)</ion-label>
+    <ion-input [(ngModel)]="experience" type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <button type="button" (click) = "saveprofile()" style="margin-top:20px; padding-top:20px; padding-bottom:20px;" color="secondary" ion-button block>Save</button>
+  </ion-item>
+
+</ion-list>
+
+</ion-content>

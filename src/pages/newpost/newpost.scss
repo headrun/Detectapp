@@ -1,0 +1,33 @@
+page-newpost {
+  #upload{
+    display: block;
+  }
+
+  #newpost{
+    width:100%;
+    height:150px;
+  }
+  #postbtn{
+    width:100px;
+    height:30px;
+  }
+  #fileupload{
+    width: 100px;
+    height:30px;
+  }
+
+  .share-btn{
+    background-color: #8CD396;
+    color:white;
+    position: fixed;
+    bottom:57px;
+    left:0;
+    width:100%;
+    height:40px;
+    font-size:24px;
+    font-weight: bold;
+    padding-left:0px;
+  }
+
+  
+}

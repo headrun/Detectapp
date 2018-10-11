@@ -1,0 +1,43 @@
+
+<ion-header>
+  <div style="position: relative; top:0; width:100%;">
+    <div>
+    <img src="assets/imgs/header.png" alt="">
+    </div>
+    <div class="container">
+      <img src="assets/imgs/belowheader.png" alt="" style="width:100%; position: absolute; top: -23px; left:0; z-index:-1;">
+      <div class="bottom-left">SETTINGS</div>
+    </div>
+  </div>
+</ion-header>
+
+
+<ion-content>
+
+      <ion-card (click) = "profilecard()">
+
+        <ion-card-content>
+
+            <!-- assets/imgs/pro_pic_placeholder.png {{this.pro_img}}-->
+
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="{{pro_img}}" style="width: 80px; height:80px;">
+              </ion-avatar>
+              <h2 class = "user-name"style="color:#000000;">EDIT MY PROFILE</h2>
+            </ion-item>
+
+        </ion-card-content>
+
+      </ion-card>
+
+      <button ion-button full style="background-color:#8CD396; position:fixed; bottom: 45px; height: 60px; font-family: Assistant-Bold;" (click) = "logout()">LOG OUT</button>
+
+        <!-- <ion-col col-6 (click) = "logout()">
+         <ion-icon class = "icon-size" name="log-out" color="danger"></ion-icon>
+         <span class="logout-text"> Logout </span>
+       </ion-col> -->
+
+  <!-- <button style="margin-top:20px;"(click) = "logout()" color="danger" ion-button round block>Logout</button> -->
+
+</ion-content>

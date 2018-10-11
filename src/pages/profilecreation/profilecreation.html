@@ -1,0 +1,49 @@
+<ion-header>
+  <div>
+    <div class="head-container">
+      <img src="assets/imgs/green_header.png" id="green_header">
+      <img src="assets/imgs/detect_black.png" id="detect_black">
+      <span class="head-text">PROFILE</span>
+    </div>
+  </div>
+ </ion-header>
+
+
+<ion-content>
+  <div style="background-image:url('assets/imgs/profile.png'); width: 100%; height: 24%; z-index:10; margin-top: 0px; padding-top: 0px; position: relative; top: 10px;"></div>
+
+<div class="row pro-style" >
+  <img (click) = "takePhoto()" class="circle-pic" src= "{{ myphoto }}" >
+    <div class="profile-info">
+      <h3 style="margin-top:80px; font-family:Assistant-Bold;"> {{profilename}} </h3>
+      <p style="margin-bottom: 0px; margin-top:-10px;"> {{profiledesignation}} </p>
+      <p style="margin-top: 0px;"> {{ProfileMobNo}} </p>
+  </div>
+</div>
+
+<ion-scroll class="profile-list" style="height:300px;">
+  <ion-item>
+    <ion-label floating>First Name</ion-label>
+    <ion-input [(ngModel)]="profileFirstName" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-input [(ngModel)]="profileLastName" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input [(ngModel)]="profileemail" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Experience(yrs)</ion-label>
+    <ion-input [(ngModel)]="experience" type="text"></ion-input>
+  </ion-item>
+</ion-scroll>
+
+<div style="display: flex; justify-content: center; position:fixed; bottom: 9%; height: 60px; z-index: 1000; width: 100%;">
+  <button ion-button full style="background-color:#8CD396; font-family:Assistant-Bold; box-shadow: 5px 10px; width: 50%; left: -2px;" (click) = "saveprofile()">UPDATE</button>
+  <button ion-button full style="background-color:#8CD396; font-family:Assistant-Bold; box-shadow: 5px 10px; width: 50%; right: -2px;" (click) = "logout()">LOG OUT</button>
+</div>
+<footer></footer>
+</ion-content>
+<footer [ic_active]="5"></footer>

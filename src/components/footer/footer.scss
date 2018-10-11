@@ -1,0 +1,61 @@
+footer {
+  #news-tab-icon, #event-tab-icon, #group-tab-icon, #profile-tab-icon, #chat-tab-icon{
+    width:35px;
+    position: relative;
+    top:40%;
+  }
+
+  .newsPage, .eventPage, .groupPage, .profilePage, .ChatPage{
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    height: 80%;
+    margin:10px;
+  } 
+
+  .eventPage > img{
+    position: relative;
+    left:3px;
+  }
+
+  .groupPage > img{
+    position: relative;
+    left:5px;
+  }
+
+  .profilePage > img{
+    position: relative;
+    left:5px;
+  }
+
+  .tabs-sec {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    bottom:0;
+    left:0;
+    align-items: flex-end;
+    padding-bottom: 8px;
+    justify-content: space-evenly;
+    background-color:#eee;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.2);
+  }
+
+  .tp-btn{
+    background-color: none;
+  }
+
+  .footer-text{
+    position: relative;
+    top:-10px;
+  }
+
+  .tab-text-color {
+    color:#8CD396;
+  }
+
+  .footer::before {
+    background-image:none;
+  }
+}

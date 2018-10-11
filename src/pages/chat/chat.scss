@@ -1,0 +1,38 @@
+page-chat {
+
+    #green_header {
+        position: relative;
+        top:0;
+      }
+      #detect_black{
+        position: absolute;
+        top:22px;
+        left:18px;
+        width:30px;
+        height: 30px;
+      }
+      
+      .head-text {
+        position: absolute;
+        top:20px;
+        left:60px;
+        font-family: "Assistant-Bold";
+        font-size:22px;
+      }
+      .header::after{
+        background-image:none;
+      }
+      .head-container {
+        position: relative;
+        top:0;
+        left:0;
+        background-color: transparent;
+      }
+      
+      .content-style{
+        height:90%;
+        position: relative;
+        top:-10px;
+      }
+
+}

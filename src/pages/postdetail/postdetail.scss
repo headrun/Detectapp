@@ -1,0 +1,127 @@
+page-postdetail {
+  .post-header{
+    border-bottom: 1px solid #eeeeee;
+  }
+  #pro-img{
+    width:40px;
+    height:40px;
+    border-radius:50px;
+  }
+
+  #post-btn{
+    height:30px;
+  }
+  .user-profile{
+    display: flex;
+    align-items: center;
+  }
+  .user-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    left:-10px;
+  }
+
+  .u-name{
+    font-size:16px;
+    font-family: Assistant-Bold;
+  }
+  .role, .post-date{
+    font-size: 12px;
+  }
+
+  .actionbar{
+    background-color:rgb(238, 238, 238);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+  }
+  .actionBtn{
+    display: flex;
+    align-items: center;
+  }
+  .non-btn{
+    font-size:16px;
+    align-self: center;
+    background-color: transparent;
+  }
+
+  .color{
+    color:#8CD396 !important;
+  }
+  .btncolor{
+    color:#8CD396 !important;
+  }
+  .post-desc{
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px;
+  }
+  .actionShow{
+    display: flex;
+    justify-content: center;
+    height:25px;
+  }
+
+  .cmt-sec{
+    display: flex;
+    align-content: center;
+    margin-top:20px;
+  }
+
+  input{
+    width:100%;
+    position: relative;
+    left:-20px;
+    top:0px;
+    padding:5px 10px;
+  }
+  .cmt-img{
+    padding-right: 0;
+  }
+  .cmt-txt{
+    position: relative;
+    left:0px;
+    padding-left:0;
+  }
+  #text_cmt{
+    position: relative;
+    left:0px;
+    top:3px;
+  }
+  .btn{
+    background-color: transparent;
+    padding-top:0px;
+    font-weight: bold;
+    color:#ada6a6c9;
+  }
+  .cmt-action{
+    position: relative;
+    top:-5px;
+  }
+
+  .like-count{
+    position: relative;
+    top:13px;
+    left:-50px;
+  }
+
+  .cmt-count{
+    position: relative;
+    top:-43px;
+  }
+
+  #like{
+    left:-80px;
+    top:27px;
+    width:16px;
+  }
+  #chat{
+    top:-28px;
+    left:-30px;
+    width:16px;
+  }
+
+}

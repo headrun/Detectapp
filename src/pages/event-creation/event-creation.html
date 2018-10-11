@@ -1,0 +1,74 @@
+<!--
+  Generated template for the EventCreationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Event Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card padding style="padding-bottom:0; box-shadow:0 2px 8px 8px rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <img src="{{eventData.images[0]}}" alt="" id="dimns">
+    </ion-card-header>
+    <ion-card-content style="padding:5px 0">
+      <ion-row>
+        <ion-col col-4 style="padding-left:0;">
+          <img src="../../assets/imgs/date_bg.png" alt="" id="date-dmns">
+          <div class="dates">
+            <p class="day">{{eventStartDay}}</p>
+            <p class="date">{{eventStartDate}}</p>
+            <p class="month">{{eventStartMonth}}</p>
+          </div>
+        </ion-col>
+        <ion-col col-5 class="event-title">
+          <span class="title">{{eventData.title_name}}</span>
+          <ion-row style="font-size:12px; position: relative; ">{{eventData.venue}}, {{eventData.city_name}}</ion-row>
+          <ion-row style="font-size:12px; position: relative;">{{eventStartDate}} {{eventStartMonth_short}} - {{eventEndDate}} {{eventEndMonth_short}}</ion-row>
+        </ion-col>
+        <ion-col col-3>
+          <a href="{{eventData.ticketUrl}}"><button type="button" ion-button class="book-btn" color="secondary">BOOK</button></a>
+        </ion-col>
+      </ion-row>
+      <ion-row offset-8 col-4 class="showgoing">
+        <img src="../../assets/imgs/Goin.png" alt="" id="gng-count"><button class="non-btn gng-btn" (click)="showGoingPeople()" type="button">{{goingCount}} Going</button>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <div>
+    <ion-row padding class="actionbar" style="padding-bottom:0px; ">
+      <ion-col class="int" col-4 [ngClass]="{'bgcolor':willflag==1}" ><button (click)="willingBtn('going')" class="non-btn btncolor" type="button" [ngClass]="{'bgcolor':willflag == 1}">Interested</button></ion-col>
+
+      <ion-col class="maybe" col-3 [ngClass]="{'bgcolor':willflag == 0}" style="width:10px; height: 35px;"><button type="button" class="non-btn btncolor" (click)="willingBtn('may be')" [ngClass]="{'bgcolor':willflag == 0}">May be</button></ion-col>
+      
+      <ion-col class="notint" col-4 [ngClass]="{'bgcolor':willflag == -1}" style="width:20px; height: 35px;"><button type="button" class="non-btn btncolor" (click)="willingBtn('not going')" [ngClass]="{'bgcolor':willflag == -1}">Not Interested</button></ion-col>
+    </ion-row>
+    <div class="desc" paddding style="padding: 0 16px;">
+      <h2 class="detail-header" >Descrption</h2>
+      <p class="detail-content">{{eventData.eventDesc}}</p>
+    </div>
+    <div class="navBtns">
+      <ion-row>
+        <ion-col col-4>
+          <button (click)="actionBtn('agenda')" id="btn" ion-button color="secondary" style="border-radius: 4px;">AGENDA</button>
+        </ion-col>
+        <ion-col col-4>
+          <button (click)="actionBtn('speakers')" id="btn" ion-button color="secondary" style="border-radius: 4px;">SPEAKERS</button>
+        </ion-col>
+        <ion-col col-4>
+          <img src="../../assets/imgs/quiz_butto.png" alt="" (click)="actionBtn('quiz')" id="quizbtn">
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <ion-row>
+    <ion-col>
+      <a ion-button  full color="secondary" class="fd-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdKeitsNzvFuhtQjQVcP2EU3Sr9P0ZCtEqoSm0Z1qPNaAbFow/viewform">Feedback</a>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<footer [ic_active]="2"></footer>

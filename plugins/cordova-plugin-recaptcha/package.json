@@ -1,0 +1,51 @@
+{
+  "_from": "git+https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git",
+  "_id": "cordova-plugin-recaptcha@1.0.2",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-recaptcha",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git",
+    "rawSpec": "https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git",
+    "saveSpec": "git+https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git",
+    "fetchSpec": "https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git#87714203c9c7e66c2d101424ad98f0434e8435b1",
+  "_spec": "https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git",
+  "_where": "/home/thrilok/hd-mobile/HumainDiagnostics",
+  "author": {
+    "name": "James Macmillan",
+    "email": "jamesm@packtpub.com"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/packt-internal/cordova-plugin-recaptcha/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A cordova plugin for the reCAPTCHA Android API",
+  "homepage": "https://bitbucket.org/packt-internal/cordova-plugin-recaptcha",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova",
+    "recaptcha"
+  ],
+  "license": "MIT",
+  "main": "www/recaptcha.js",
+  "name": "cordova-plugin-recaptcha",
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.2"
+}

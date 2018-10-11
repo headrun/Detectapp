@@ -1,0 +1,29 @@
+<ion-footer>
+  <div class="tabs-sec">
+    <div class="newsPage">
+      <img src="assets/imgs/ic_news.png" id="news-tab-icon" (click)="tabCheck(1)" *ngIf="ic_active == 1">
+      <img src="assets/imgs/Inactive_News.png" id="news-tab-icon" (click)="tabCheck(1)" *ngIf="ic_active != 1">
+      <p (click)="tabCheck(1)" class="footer-text" [ngClass]="{'tab-text-color': ic_active == 1}">NEWS</p>
+    </div>
+    <div class="eventPage">
+      <img src="assets/imgs/ic_events.png" id="event-tab-icon" (click)="tabCheck(2)" *ngIf="ic_active == 2">
+      <img src="assets/imgs/Inactive_Events.png" id="event-tab-icon" (click)="tabCheck(2)" *ngIf="ic_active != 2">
+      <p (click)="tabCheck(2)" class="footer-text" [ngClass]="{'tab-text-color': ic_active == 2}">EVENTS</p>
+    </div>
+    <div class="groupPage">
+      <img src="assets/imgs/ic_groups.png" id="group-tab-icon" (click)="tabCheck(3)" *ngIf="ic_active == 3">
+      <img src="assets/imgs/Inactive_Groups.png" id="group-tab-icon" (click)="tabCheck(3)" *ngIf="ic_active != 3">
+      <p (click)="tabCheck(3)" class="footer-text" [ngClass]="{'tab-text-color': ic_active == 3}">GROUPS</p>
+    </div>
+    <!-- <div class="ChatPage">
+      <img src="assets/imgs/comments.png" id="chat-tab-icon" (click)="tabCheck(4)" *ngIf="ic_active == 4">
+      <img src="assets/imgs/Inactive_Comments.png" id="chat-tab-icon" (click)="tabCheck(4)" *ngIf="ic_active != 4">
+      <p (click)="tabCheck(4)" class="footer-text" [ngClass]="{'tab-text-color': ic_active == 4}">CHATS</p>
+    </div> -->
+    <div class="profilePage">
+      <img src="assets/imgs/ic_settings.png" id="profile-tab-icon" (click)="tabCheck(5)" *ngIf="ic_active == 5">
+      <img src="assets/imgs/Inactive_Settings.png" id="profile-tab-icon" (click)="tabCheck(5)" *ngIf="ic_active != 5">
+      <p (click)="tabCheck(5)" class="footer-text" [ngClass]="{'tab-text-color': ic_active == 5}">PROFILE</p>
+    </div>
+  </div>
+</ion-footer>

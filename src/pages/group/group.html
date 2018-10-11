@@ -1,0 +1,41 @@
+<ion-header>
+  <div>
+    <div class="head-container">
+      <img src="../../assets/imgs/green_header.png" id="green_header">
+      <img src="../../assets/imgs/detect_black.png" id="detect_black">
+      <span class="head-text">GROUPS</span>
+    </div>
+  </div>
+</ion-header>
+<ion-content padding >
+  <div *ngIf="isGroupsEmpty == true && userGroupsData.length == 0" class="mpty-data-msg">No Groups</div>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <div class="content-style">
+    <div class="group-sec" *ngFor="let group of userGroupsData; index as i">
+      <ion-row>
+        <ion-col col-3 (click)="openGroup(i)">
+          <div class="img-sec">
+            <!-- <img src="../../assets/imgs/circle_shadow.png" alt="" class="img-bg"> -->
+            <img src="{{group.images_links}}" id="group-img" *ngIf="group.images_links != ''">    
+          </div>
+        </ion-col>
+        <ion-col col-6 class="group-title" (click)="openGroup(i)">
+          <h4>{{group.title}}</h4>
+          <h5 class="fol">{{group.followers}} Followers</h5>
+        </ion-col>
+        <ion-col col-3 class="j-btn">
+          <button type="button" round *ngIf="!group.joined" color="secondary" ion-button (click)="joinGroup(i)">Join</button>
+          <!-- <button type="button" round *ngIf="group.joined" color="secondary" ion-button>Joined</button> -->
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+<footer [ic_active]="3"></footer>

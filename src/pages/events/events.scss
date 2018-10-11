@@ -1,0 +1,183 @@
+page-events{
+  .card-md h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(34, 34, 34);
+    margin: 2px 5px;
+    overflow-x: auto;
+  }
+  ion-card, .card, .card-md{
+    margin:0;
+    border-radius: 0px;
+    width:100%;
+    margin-bottom:10px;
+  }
+  ion-card-header, .card-header, .md-card-header {
+    padding:0;
+    white-space: normal;
+  }
+  
+  #dimns{
+    height: 200px;
+    width: 100%;
+  }
+  .event-sec{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #event-dmns{
+    width:150px;
+    height:80px;
+    border-radius:9px;
+  }
+
+  .event-card{
+    margin: 5px;
+  }
+  
+
+  // New Styles
+
+
+  .event-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:10px;
+    margin-right: 10px;
+    margin-top:5px;
+  }
+
+  #event-img{
+    width:250px;
+    height: 100px;
+    border-radius: 8px;
+  }
+
+  .book-btn{
+    box-shadow: none;
+    font-family: Assistant-Bold;
+    width:80px;
+  }
+
+  .book-sec{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    top:27px;
+  }
+
+  #date-dmns{
+    width:95px;
+    height:95px;
+    position: relative;
+    top:0px;
+  }
+
+  .day{
+    // font-weight: bold;
+    color:white;
+    z-index:10;
+    text-align: center;
+    display: block;
+    width: 95px;
+    position: relative;
+    top:8px;
+    font-size:12px;
+
+  }
+  
+  .date{
+    font-family: 'Assistant-ExtraBold';
+    font-size:52px;
+    color:white;
+    z-index: 10;
+    width:95px;
+    text-align: center;
+    position: relative;
+    top:-17px;
+  }
+  
+  .month{
+    font-size:12px;
+    top:-11px;
+  }
+  
+  .month{
+    // font-weight: bold;
+    color:white;
+    z-index:10;
+    width: 95px;
+    text-align: center;
+    position: relative;
+    top:-37px;
+  }
+
+  .dates{
+    position: absolute;
+    top:-5px;
+  }
+
+  .date-sec{
+    position: relative;
+    top:0;
+    width:95px;
+    margin-right:2px;
+  }
+
+  .event-title{
+    display: flex;
+    justify-content: center;
+    width:150px;
+  }
+
+  .title{
+    font-family: Assistant-Bold;
+    position: relative;
+    top:-10px;
+    left:2px;
+  }
+
+  .has-refresher .scroll-content{
+    border-top:0px !important;
+  }
+
+  #green_header {
+    position: relative;
+    top:0;
+  }
+  #detect_black{
+    position: absolute;
+    top:22px;
+    left:18px;
+    width:30px;
+    height: 30px;
+  }
+ 
+  .head-text {
+    position: absolute;
+    top:20px;
+    left:60px;
+    font-family: "Assistant-Bold";
+    font-size:22px;
+  }
+  .header::after{
+    background-image:none;
+  }
+  .head-container {
+    position: relative;
+    top:0;
+    left:0;
+    background-color: transparent;
+  }
+ 
+ .content-style{
+    height:90%;
+    position: relative;
+    top:-10px;
+  }
+
+
+}
